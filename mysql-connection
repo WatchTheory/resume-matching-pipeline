@@ -1,0 +1,43 @@
+
+# import libraries
+import mysql.connector
+from mysql.connector import Error 
+
+
+# Database connection details 
+config = {
+    'host': 'localhost'
+}
+
+try:
+    # Establish the connection
+    connection = mysql.connector.connect(**config)
+   
+    # Print message if connection is successful 
+    if connection.is_connected():
+        print("Successful connected to the databse")
+
+        # Create a curser object to execute SQL queries
+        cursor = connection.curser()
+
+        # Create the job table 
+        resume_jobs = """
+            id INT AUTO_INCREMENT PRIMARY KEY
+            title VARCHAR(255),
+            company VARCHAR(255)
+            qualifications  TEXT
+        """
+        
+        cursor.excute(resume_jobs)
+        print("Table created or already exists")
+
+except Error as e:
+    print(f"Error connecting to MYSQL: {e}")
+finally:
+    # Close the cursor and connection
+    if 'cursor' in locals():
+        cursor.close()
+    if 'connection' in locals() and connection.is_connected():
+        connection.close()
+        print("Connection closed")
+
