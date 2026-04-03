@@ -1,5 +1,3 @@
-
-
 # Resume Pipeline
 
 
@@ -11,10 +9,10 @@ Using `web scrapping`, Huggingfave `AI model`, ranking system and `MYSQL`, while
 
 
 ### Agenda
-- [x] Create a python script 
-- [ ] Create a MYSQL database
-- [ ] Use a HuggingFace AI Model
-- [ ] Create a Pipeline to run everything
+- [x] Create a python script and a test script. 
+- [ ] Create a MYSQL database and set up the connection (`In Progress`)
+- [ ] Use a HuggingFace AI Model.
+- [ ] Create a Pipeline to run everything.
 
 Bonus : 
 - [ ] Build a Dashboard of job that shows everything.
