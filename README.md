@@ -1,5 +1,3 @@
-
-
 # Resume Pipeline
 
 ## Summary 
