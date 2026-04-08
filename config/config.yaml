@@ -1,0 +1,23 @@
+DATABASE_URL=mysql+pymysql:
+   //your_username:your_password@localhost/resume_pipelinne  # Add your username and password here
+    
+
+
+categories:
+  - Software Engineering
+  - Data Science
+  - Marketing
+  - Finance
+  - Sales
+  - Technology
+  - Business
+  # add more anytime
+
+default_fields:
+  - title
+  - company
+  - pay
+  - location
+
+
+

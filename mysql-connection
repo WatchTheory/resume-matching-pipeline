@@ -1,4 +1,3 @@
-
 # import libraries
 import mysql.connector
 from mysql.connector import Error 
@@ -6,7 +5,10 @@ from mysql.connector import Error
 
 # Database connection details 
 config = {
-    'host': 'localhost'
+    'host': 'localhost',       # Or your server's IP if remote
+    'user': 'name',   	    # From your CREATE USER step
+    'password': 'enter_passsword_here',
+    'database': 'resume_pipeline'  # Your database name
 }
 
 try:
@@ -20,14 +22,7 @@ try:
         # Create a curser object to execute SQL queries
         cursor = connection.curser()
 
-        # Create the job table 
-        resume_jobs = """
-            id INT AUTO_INCREMENT PRIMARY KEY
-            title VARCHAR(255),
-            company VARCHAR(255)
-            qualifications  TEXT
-        """
-        
+        # Table already created
         cursor.excute(resume_jobs)
         print("Table created or already exists")
 
