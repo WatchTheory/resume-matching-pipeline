@@ -6,7 +6,8 @@ This is end-to-end data project, I started because I didn't want to keep apply f
 Using `web scrapping`, Huggingfave `AI model`, ranking system and `MYSQL`, while also building a `pipeline` to run and determine which jobs I should apply to. 
 
 
-
+## Project Strucuture
+```
 job-resume-pipeline/
 ├── config/
 │   └── config.yaml            # DB creds, categories, API keys (use secrets later)
@@ -22,7 +23,7 @@ job-resume-pipeline/
 ├── pyproject.toml				# Place holder
 ├── .env                     # (gitignored) for secrets
 └── README.md				# ReadMe File
-
+```
 
 ### Agenda
 - [x] Create a python script 
