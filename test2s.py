@@ -1,5 +1,4 @@
 #!C:\Python314\python.exe
-
 import pandas as pd 
 import requests
 import csv
@@ -17,10 +16,11 @@ URL = "https://data.usajobs.gov/api/search"
 # Fetch the page WITH headers first
 # =============================================
 # headers = {
-#     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+#     
 # }
 
-headers = { 'Authorization-Key': '='}
+headers = {}  # <-- this is how you would load the key from the .env file using python-dotenv, but since we can't actually run this code, I'm just showing it as a placeholder.
+
 # parms = {
 #      "Keyword:" "Data Analyst",
 #      #"WhoMayApply:" "Public",
@@ -118,10 +118,9 @@ if page_response.status_code == 200:        # If the page status code is equal t
             found_skills = [skill for skill in skills_words if skill in qualifications]  # Check if any of the skills in skills_words are mentioned in the qualifications string            
         if not qualifications:                                      # if qualifications do not exist or is empty
             print("Qualifications / Skills: Not Listed")
-        
+       
 
-    
-
+       
         # === PRINTING SECTION ===
         if title:               # if the title exist print Title, Agency, City, etc        
             print("--------")                
@@ -152,54 +151,6 @@ else:
 
 
 
-
-
-# ----------------------------------------------------------------------------------------------
-# Layout of the job listing (example):
-#       <p>Other Agencies and Independent Organizations</p>
-#       <p>Washington, District of Columbia</p>
-#       <p>Starting at $63,940 Per year (GS 8-15)</p>
-#       <p>Permanent • Full-time</p>
-
-
-# <title>Jobs open to U.S. Citizens, Nationals or those who owe allegiance to the U.S.</title>
-
-#  Open 10/01/2025 to 09/30/2026
-
-
-# ----------------------------------------------------------------------------------------------
-
-#<div id="search-results" class="mt-4"><div class="border border-gray-lighter bg-white p-4">
-
-            
-  # print("Agency:", descriptor.get("OrganizationName"))
-
-
-
-# Create a dictionary to store the job listings
-
-
-# Create a for loop to extract the job listings
-
-# for to loop through the HTML elements and extact 
-# for card in soup.find_all("div", class_="card"):        # Change element when you get the URL
-
-      # task - extract the job title 
-    #   title = card.find("h2", class_ = "title").text.strip() if card.find("h2", class_ = "title") else "N/A"
-    #   print(title)   # Print the title to verify it's working
-      # task - extract the application link
-
-
-
-      # task - extract company name
-
-
-
-      # task - extract the skills required for the job
-
-
-# Time delay to avoid overwhelming the server
-# time.sleep(0.2)
 
 
 

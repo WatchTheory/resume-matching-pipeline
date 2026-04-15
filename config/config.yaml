@@ -1,23 +1,30 @@
-DATABASE_URL=mysql+pymysql:
-   //your_username:your_password@localhost/resume_pipelinne  # Add your username and password here
+"DATABASE_URL=mysql+pymysql://your_username:your_password@localhost/resume_pipelinne"  # Add your username and password here
+    # //resume_pipeline:black@localhost/resume_pipeline  # Add your username and password here
+
     
+# categories:
+#   - Software Engineering
+#   - Data Science
+#   - Marketing
+#   - Finance
+#   - Sales
+#   - Technology
+#   - Business
+#   # add more anytime
 
+# default_fields:
+#   - id
+#   - title
+#   - agency
+#   - city
+#   - state
+#   - salary_min
+#   - salary_max
+#   - open_date
+#   - close_date
+#   - found_skills
+#   - skills
 
-categories:
-  - Software Engineering
-  - Data Science
-  - Marketing
-  - Finance
-  - Sales
-  - Technology
-  - Business
-  # add more anytime
-
-default_fields:
-  - title
-  - company
-  - pay
-  - location
 
 
 
